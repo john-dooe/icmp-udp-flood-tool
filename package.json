@@ -1,18 +1,17 @@
 {
-  "name": "dos-electron",
+  "name": "simple-dos-tool",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A simple ICMP&UDP DoS tool",
   "main": "./src/main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/john-dooe/Simple-DoS-Tool",
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "DoS",
+    "ICMP",
+    "UDP"
   ],
   "author": "john_doe",
   "license": "CC0-1.0",
