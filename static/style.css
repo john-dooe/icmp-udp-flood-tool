@@ -1,0 +1,47 @@
+.flex {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  width: 700px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.choices {
+  margin-bottom: 2px;
+}
+
+.radio-inline {
+  margin-right: 10px;
+}
+
+.buttons {
+  display: inline-block;
+}
+
+.info-area {
+  margin: 0 auto;
+  height: 35px;
+}
+
+input[type='radio'] {
+  margin-right: 5px;
+}
+
+button {
+  width: 70px;
+}
+
+::-webkit-input-placeholder {
+  color: #bbbbbb !important;
+}
+:-moz-placeholder {
+  color: #bbbbbb !important;
+}
+::-moz-placeholder {
+  color: #bbbbbb !important;
+}
+:-ms-input-placeholder {
+  color: #bbbbbb !important;
+}
