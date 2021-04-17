@@ -1,7 +1,7 @@
 {
-  "name": "simple-dos-tool",
+  "name": "icmp-udp-flood-tool",
   "version": "1.0.0",
-  "description": "A simple ICMP&UDP DoS tool",
+  "description": "A simple ICMP&UDP flood tool",
   "main": "./src/main.js",
   "scripts": {
     "start": "electron ."
