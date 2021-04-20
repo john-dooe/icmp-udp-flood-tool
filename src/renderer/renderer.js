@@ -10,17 +10,17 @@ $(document).ready(function () {
   $('#process-num').val(cpu_num);
 
   $('input[name="choice"]').change(function () {
-    choice = $("input[name='choice']:checked").attr('id');
-    if (choice === 'icmp') {
-      choice = 1;
-    } else if (choice === 'udp') {
-      choice = 2;
+    global.choice = $("input[name='choice']:checked").attr('id');
+    if (global.choice === 'icmp') {
+      global.choice = 1;
+    } else if (global.choice === 'udp') {
+      global.choice = 2;
     } else {
-      choice = null;
+      global.choice = null;
     }
-    if (choice === 1) {
+    if (global.choice === 1) {
       $('#target-port').attr('disabled', true);
-    } else if (choice === 2) {
+    } else if (global.choice === 2) {
       $('#target-port').attr('disabled', false);
     }
   });
@@ -31,9 +31,9 @@ $(document).ready(function () {
     var bytes = $('#bytes').val();
     var sleep_time = $('#sleep-time').val();
     var process_num = $('#process-num').val();
-    var data = [target_ip, target_port, bytes, sleep_time, process_num, choice];
+    var data = [target_ip, target_port, bytes, sleep_time, process_num, global.choice];
 
-    if (choice === 1 && target_ip && bytes && sleep_time && process_num) {
+    if (global.choice === 1 && target_ip && bytes && sleep_time && process_num) {
       let bytes_num = parseInt(bytes);
       if (ip_reg.test(target_ip) && bytes_reg.test(bytes) && bytes_reg.test(sleep_time) && bytes_reg.test(process_num) && bytes_num > 0 && bytes_num < 65536) {
         if (able === 'start') {
@@ -46,7 +46,7 @@ $(document).ready(function () {
       } else {
         ipcRenderer.send('error', 'format');
       }
-    } else if (choice === 2 && target_ip && target_port && bytes && sleep_time && process_num) {
+    } else if (global.choice === 2 && target_ip && target_port && bytes && sleep_time && process_num) {
       let target_port_num = parseInt(target_port);
       let bytes_num = parseInt(bytes);
       if (ip_reg.test(target_ip) && bytes_reg.test(target_port) && bytes_reg.test(bytes) && bytes_reg.test(sleep_time) && bytes_reg.test(process_num) && bytes_num > 0 && bytes_num < 65536 && target_port_num > 0 && target_port_num < 65536) {

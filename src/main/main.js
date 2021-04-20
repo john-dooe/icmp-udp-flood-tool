@@ -12,7 +12,7 @@ function createWindow() {
       // preload: path.join(__dirname, 'preload.js'),
     },
   });
-  mainWindow.loadFile('index.html');
+  mainWindow.loadFile('public/index.html');
   // mainWindow.webContents.openDevTools();
 }
 
@@ -55,5 +55,5 @@ ipcMain.on('start', function (event, data) {
 });
 
 ipcMain.on('stop', function (event, data) {
-  main_process.kill('SIGINT');
+  global.main_process.kill('SIGINT');
 });
