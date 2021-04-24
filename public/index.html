@@ -1,60 +1,60 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <link href="./static/bootstrap.min.css" rel="stylesheet" />
+<html lang="zh">
+<head>
+    <meta charset="UTF-8"/>
+    <link href="./static/bootstrap.min.css" rel="stylesheet"/>
     <script src="./static/popper.min.js"></script>
     <script src="./static/bootstrap.min.js"></script>
-    <link href="./static/style.css" rel="stylesheet" />
+    <link href="./static/style.css" rel="stylesheet"/>
     <title>ICMP & UDP Flood Tool</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="flex">
+</head>
+<body>
+<div class="container">
+    <div class="flex">
         <div class="choices">
-          <label class="radio-inline"> <input type="radio" name="choice" id="icmp" />ICMP Flood</label>
-          <label class="radio-inline"> <input type="radio" name="choice" id="udp" />UDP Flood</label>
+            <label class="radio-inline"> <input type="radio" name="choice" id="icmp"/>ICMP Flood</label>
+            <label class="radio-inline"> <input type="radio" name="choice" id="udp"/>UDP Flood</label>
         </div>
 
         <label for="target-ip">目标 IP</label>
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="xxx.xxx.xxx.xxx" id="target-ip" />
+            <input type="text" class="form-control" placeholder="xxx.xxx.xxx.xxx" id="target-ip"/>
         </div>
         <label for="target-port">目标端口</label>
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="1-65535" id="target-port" />
+            <input type="text" class="form-control" placeholder="1-65535" id="target-port"/>
         </div>
         <label for="bytes">包大小</label>
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="1-65535" value="100" id="bytes" />
-          <div class="input-group-append">
-            <span class="input-group-text">字节</span>
-          </div>
+            <input type="text" class="form-control" placeholder="1-65535" value="100" id="bytes"/>
+            <div class="input-group-append">
+                <span class="input-group-text">字节</span>
+            </div>
         </div>
         <label for="sleep-time">发包间隔时间</label>
         <div class="input-group mb-3">
-          <input type="text" class="form-control" value="50" id="sleep-time" />
-          <div class="input-group-append">
-            <span class="input-group-text">毫秒</span>
-          </div>
+            <input type="text" class="form-control" value="0" id="sleep-time"/>
+            <div class="input-group-append">
+                <span class="input-group-text">毫秒</span>
+            </div>
         </div>
         <label for="process-num">进程数</label>
         <div class="input-group mb-3">
-          <input type="text" class="form-control" id="process-num" />
+            <input type="text" class="form-control" id="process-num"/>
         </div>
 
         <div class="buttons">
-          <button type="submit" class="btn btn-primary" id="start-button">开始</button>
-          <button type="button" class="btn btn-primary disabled" id="stop-button">停止</button>
+            <button type="submit" class="btn btn-primary" id="start-button">开始</button>
+            <button type="button" class="btn btn-primary disabled" id="stop-button">停止</button>
         </div>
         <div class="info-area">
-          <span id="info"></span>
+            <span id="info"></span>
         </div>
-      </div>
     </div>
-    <script>
-      window.$ = window.jQuery = require('./static/jquery.min.js');
-    </script>
-    <script src="../src/renderer/renderer.js"></script>
-  </body>
+</div>
+<script>
+    window.$ = window.jQuery = require('./static/jquery.min.js');
+</script>
+<script src="../src/renderer/renderer.js"></script>
+</body>
 </html>
